@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FloorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="First_Floor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Row" Type="int" Nullable="false" />
+    <Property Name="Col" Type="int" Nullable="false" />
+    <Property Name="Value" Type="int" Nullable="false" />
+    <Property Name="Name" Type="text" />
+    <Property Name="PathOrNot" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ground_Floor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Row" Type="int" Nullable="false" />
+    <Property Name="Col" Type="int" Nullable="false" />
+    <Property Name="Value" Type="int" Nullable="false" />
+    <Property Name="Name" Type="text" />
+    <Property Name="PathOrNot" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mapped_Floor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Row" Type="int" />
+    <Property Name="Col" Type="int" />
+    <Property Name="Room" Type="text" />
+    <Property Name="Nearest_stairX" Type="int" />
+    <Property Name="Nearest_stairY" Type="int" />
+    <Property Name="Floor" Type="text" />
+    <Property Name="Nearest_EmergencyStairX" Type="int" />
+    <Property Name="Nearest_EmergencyStairY" Type="int" />
+  </EntityType>
+  <EntityType Name="Second_Floor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Row" Type="int" Nullable="false" />
+    <Property Name="Col" Type="int" Nullable="false" />
+    <Property Name="Value" Type="int" Nullable="false" />
+    <Property Name="Name" Type="text" />
+    <Property Name="PathOrNot" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="FloorModelStoreContainer">
+    <EntitySet Name="First_Floor" EntityType="Self.First_Floor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ground_Floor" EntityType="Self.Ground_Floor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mapped_Floor" EntityType="Self.Mapped_Floor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Second_Floor" EntityType="Self.Second_Floor" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Emergency Search";
+}
+<form method="post" action="@Url.Action("SearchEmergencyView", "Home")">
+    <br />
+    <br />
+    <br />
+    <h2>Search Location</h2>
+    <div>
+        Current Location :
+        @Html.DropDownList("CurrentLocation", (IEnumerable<SelectListItem>)TempData["CurrentLoc"], "Please select", new {required = "Required"})
+</div>
+
+    <br />
+
+    <div class="form-group">
+        <div class="form-actions no-color">
+            <input type="submit" value="Emergency Search" class="btn btn-default" />
+        </div>
+    </div>
+
+
+</form>
+
+
+
+
+
+
+

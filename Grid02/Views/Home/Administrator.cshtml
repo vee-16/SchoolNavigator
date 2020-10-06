@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Administration";
+}
+<form method="post" action="@Url.Action("LoginView", "Home")">
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+    <h2>Admin Login</h2>
+    <div>
+        @{
+            if (Session["errorMessage"] != null)
+            {
+                if (Session["errorMessage"].ToString().Length > 0)
+                {
+                    <p style="color:red">
+
+                       @Session["errorMessage"].ToString()
+
+                    </p>
+                }
+        
+                else
+                {
+                    Session["errorMessage"] = "";
+                }
+            }
+        }
+        </div>
+    <div>
+        User Name :
+        @Html.TextBox("UserName")
+    </div>
+
+    <br />
+
+    <div>
+        Password :
+        @Html.Password("Password")
+        
+    </div>
+    <br />
+
+    <div class="form-group">
+        <div class="form-actions no-color">
+            <input type="submit" value="Login" class="btn btn-default" />
+        </div>
+    </div>
+</form>
+

@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Grid02.Models.Mapped_Floor>
+<br />
+<br />
+<br />
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Row)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Col)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Room)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nearest_stairX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nearest_stairY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Floor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nearest_EmergencyStairX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nearest_EmergencyStairY)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Row)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Room)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nearest_stairX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nearest_stairY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Floor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nearest_EmergencyStairX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nearest_EmergencyStairY)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>

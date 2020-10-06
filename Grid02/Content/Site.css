@@ -1,0 +1,173 @@
+﻿/**
+* The School Navigator
+*
+* @author  Vaishnavi Sinha
+* @version 1.0
+* @Date   05-01-2019 
+*/
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.header img {
+    float: left;
+    width: 50px;
+    height: 50px;
+    /*background: #555;*/
+}
+
+.header h2 {
+    position: relative;
+    padding:0 0 0 0;
+    top: 18px;
+    left: 10px;
+    color:white;
+    font-weight:bold;
+}
+
+div.ImageWithGrid {
+    width: 1000px;
+    height:800px;
+    position:relative;
+    margin-left: 100px;
+}
+
+div.FloorPlan {
+    position:absolute;
+    top:0px;
+}
+
+div.thisGrid {
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Arial;
+    font-size: medium;
+    display: grid;
+    /*border:solid;*/
+    grid-template-columns: repeat(25, 50px);
+}
+
+
+div.thisGrid > div {
+    display: block;
+    font-size: 8px;
+    height: 36.36px;
+    text-align: center;
+    /*border: solid;*/ 
+    vertical-align: middle;
+    justify-content: center;
+}
+
+/*Path-0, Facilities-5, Stairs/Exit-10,Toilet-15, Class-20*/
+/*Path*/
+div.thisGrid > div.mode_0 {
+    background-color: white;
+}
+
+    /*Facilities*/
+    div.thisGrid > div.mode_5 {
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        background-color: rgb(186, 234, 238);
+    }
+     
+    /*Stairs and exits*/
+    div.thisGrid > div.mode_10 {
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        background-color: rgb(151, 84, 135);
+    }    
+    
+
+    /*Toilets*/
+    div.thisGrid > div.mode_15 {
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        background-color: rgb(246, 248, 119);
+    }
+ 
+/*Classroom*/
+    div.thisGrid > div.mode_20 {
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        background-color: rgb(38, 157, 193);
+    }
+
+
+/*Lockers*/
+    div.thisGrid > div.mode_30 {
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+        background-color: rgb(241, 216, 238);
+    }
+
+/*Background*/
+    div.thisGrid > div.mode_1 {
+        background-color: rgb(199, 208, 207);
+    }
+
+    /*199, 208, 207*/
+
+
+/*Short Path*/
+    div.thisGrid > div.mode_7 {
+        background-color: rgb(8, 213, 84);
+    }
+        /* Colors
+background-color:rgb(186, 234, 238) //light blue
+background-color:rgb(221, 133, 217) //purple
+background-color: rgb(38, 157, 193) // blue
+background-color: rgb(246, 248, 119) // light yellow
+background-color: rgb(199, 208, 207) rgb(173, 184, 196) // grey
+*/
+    
+div.thisGrid{
+    border-style:solid;
+    border-color:black;
+    border-width: 2px;
+
+}
+    
+.Icon-bar{
+    position: fixed;
+    top: 350px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+
+    
+
+
+
+

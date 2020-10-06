@@ -1,0 +1,101 @@
+﻿@model Grid02.ViewModels.Matrix
+@{
+    /**/
+    //
+    ViewBag.Title = "SearchEmergencyView";
+
+    var firstObject = ViewData["first"] as Grid02.ViewModels.Matrix;
+    var secondObject = ViewData["second"] as Grid02.ViewModels.Matrix;
+    var thirdObject = ViewData["third"] as Grid02.ViewModels.Matrix;
+}
+<br />
+<br />
+<br />
+
+<div class="Icon-bar">
+    <img src="~/Images/Legend.png" width="100%" height="100%" />
+</div>
+
+@{
+
+    if (@ViewBag.FirstDisplay)
+    {
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@ViewBag.FirstDisplayTitle</h2>
+
+        <div class="ImageWithGrid">
+            <div class="thisGrid">
+                @{
+                    int Rows = firstObject.grid.GetLength(0);
+                    int Cols = firstObject.grid.GetLength(1);
+
+                    for (int x = 0; x < Rows; x++)
+                    {
+                        for (int y = 0; y < Cols; y++)
+                        {
+                            //Console.Write(array[x, y] != 100 ? $"{array[x, y]}" : "*");
+                            <div class="mode_@firstObject.grid[x, y]">
+                                @firstObject.label[x, y]
+                            </div>
+                        }
+                    }
+                }
+            </div>
+        </div>
+    }
+}
+@{
+
+    if (@ViewBag.SecondDisplay)
+    {
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@ViewBag.SecondDisplayTitle</h2>
+
+        <div class="ImageWithGrid">
+            <div class="thisGrid">
+                @{
+                    int Rows = secondObject.grid.GetLength(0);
+                    int Cols = secondObject.grid.GetLength(1);
+
+                    for (int x = 0; x < Rows; x++)
+                    {
+                        for (int y = 0; y < Cols; y++)
+                        {
+                            //Console.Write(array[x, y] != 100 ? $"{array[x, y]}" : "*");
+                            <div class="mode_@secondObject.grid[x, y]">
+                                @secondObject.label[x, y]
+                            </div>
+                        }
+                    }
+                }
+            </div>
+        </div>
+    }
+}
+@{
+
+    if (@ViewBag.ThirdDisplay)
+    {
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@ViewBag.ThirdDisplayTitle</h2>
+
+        <div class="ImageWithGrid">
+            <div class="thisGrid">
+                @{
+                    int Rows = thirdObject.grid.GetLength(0);
+                    int Cols = thirdObject.grid.GetLength(1);
+
+                    for (int x = 0; x < Rows; x++)
+                    {
+                        for (int y = 0; y < Cols; y++)
+                        {
+                            //Console.Write(array[x, y] != 100 ? $"{array[x, y]}" : "*");
+                            <div class="mode_@thirdObject.grid[x, y]">
+                                @thirdObject.label[x, y]
+                            </div>
+                        }
+                    }
+                }
+            </div>
+        </div>
+    }
+}
+
+

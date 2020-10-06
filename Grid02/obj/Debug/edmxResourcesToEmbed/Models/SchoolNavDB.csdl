@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FloorModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="First_Floor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Row" Type="Int32" Nullable="false" />
+    <Property Name="Col" Type="Int32" Nullable="false" />
+    <Property Name="Value" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PathOrNot" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ground_Floor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Row" Type="Int32" Nullable="false" />
+    <Property Name="Col" Type="Int32" Nullable="false" />
+    <Property Name="Value" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PathOrNot" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Second_Floor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Row" Type="Int32" Nullable="false" />
+    <Property Name="Col" Type="Int32" Nullable="false" />
+    <Property Name="Value" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PathOrNot" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SchoolNavDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="First_Floor" EntityType="Self.First_Floor" />
+    <EntitySet Name="Ground_Floor" EntityType="Self.Ground_Floor" />
+    <EntitySet Name="Second_Floor" EntityType="Self.Second_Floor" />
+    <EntitySet Name="Mapped_Floor" EntityType="FloorModel.Mapped_Floor" />
+  </EntityContainer>
+  <EntityType Name="Mapped_Floor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Row" Type="Int32" />
+    <Property Name="Col" Type="Int32" />
+    <Property Name="Room" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Nearest_stairX" Type="Int32" />
+    <Property Name="Nearest_stairY" Type="Int32" />
+    <Property Name="Floor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Nearest_EmergencyStairX" Type="Int32" />
+    <Property Name="Nearest_EmergencyStairY" Type="Int32" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="header">
+                <img src="~/Images/Logo.png" />
+                <h2>Jumeirah College Navigator</h2>
+            </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Ground Floor", "Index", "Ground_Floor")</li>
+                    <li>@Html.ActionLink("First Floor", "Index", "First_Floor")</li>
+                    <li>@Html.ActionLink("Second Floor", "Index", "Second_Floor")</li>
+                    <li>@Html.ActionLink("Find Location", "Search", "Home")</li>
+                    <li>@Html.ActionLink("Find Location - Emergency", "SearchEmergency", "Home")</li>
+                    @{
+
+                        if (Session["UserType"] != null)
+                        {
+                            if (Session["UserType"].ToString().Equals("Admin"))
+                            {
+                                <li>@Html.ActionLink("Floor Mapping", "Index", "Mapped_Floor")</li>
+                            }
+                        }
+                    }
+                    @{
+
+                        if (Session["UserType"] != null)
+                        {
+                            if (Session["UserType"].ToString().Equals("Admin"))
+                            {
+                                <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
+                            }
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<br />
+<br />
+<br />
+
+<h2>Index</h2>
+
+@{
+
+    if (Session["UserType"] != null)
+    {
+        if (Session["UserType"].ToString().Equals("Admin"))
+        {
+            <p>
+                @Html.ActionLink("View All", "ViewAll")
+            </p>
+        }
+    }
+}
+
+<div>
+    <img src="~/Images/Ground.png" width="100%" height="100%" />
+</div>
+

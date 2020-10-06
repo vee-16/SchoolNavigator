@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FloorModelStoreContainer" CdmEntityContainer="SchoolNavDBEntities">
+    <EntitySetMapping Name="First_Floor">
+      <EntityTypeMapping TypeName="FloorModel.First_Floor">
+        <MappingFragment StoreEntitySet="First_Floor">
+          <ScalarProperty Name="PathOrNot" ColumnName="PathOrNot" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Row" ColumnName="Row" />
+          <ScalarProperty Name="Col" ColumnName="Col" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ground_Floor">
+      <EntityTypeMapping TypeName="FloorModel.Ground_Floor">
+        <MappingFragment StoreEntitySet="Ground_Floor">
+          <ScalarProperty Name="PathOrNot" ColumnName="PathOrNot" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Row" ColumnName="Row" />
+          <ScalarProperty Name="Col" ColumnName="Col" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Second_Floor">
+      <EntityTypeMapping TypeName="FloorModel.Second_Floor">
+        <MappingFragment StoreEntitySet="Second_Floor">
+          <ScalarProperty Name="PathOrNot" ColumnName="PathOrNot" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Row" ColumnName="Row" />
+          <ScalarProperty Name="Col" ColumnName="Col" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mapped_Floor">
+      <EntityTypeMapping TypeName="FloorModel.Mapped_Floor">
+        <MappingFragment StoreEntitySet="Mapped_Floor">
+          <ScalarProperty Name="Nearest_EmergencyStairY" ColumnName="Nearest_EmergencyStairY" />
+          <ScalarProperty Name="Nearest_EmergencyStairX" ColumnName="Nearest_EmergencyStairX" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="Nearest_stairY" ColumnName="Nearest_stairY" />
+          <ScalarProperty Name="Nearest_stairX" ColumnName="Nearest_stairX" />
+          <ScalarProperty Name="Room" ColumnName="Room" />
+          <ScalarProperty Name="Col" ColumnName="Col" />
+          <ScalarProperty Name="Row" ColumnName="Row" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

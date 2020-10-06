@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Search";
+}
+<form method="post" action="@Url.Action("SearchView", "Home")">
+    <br />
+    <br />
+    <br />
+    <h2>Search Location</h2>
+    <div>
+        Start Location :
+        @Html.DropDownList("StartLocation", (IEnumerable<SelectListItem>)TempData["StartLoc"], "Please select", new {required = "Required"})
+        
+
+     
+
+    <br />
+
+    <div>
+        End Location :
+
+        @Html.DropDownList("EndLocation", (IEnumerable<SelectListItem>)TempData["EndLoc"], "Please select", new { required = "Required" })
+
+</div>
+    <br />
+
+    <div class="form-group">
+        <div class="form-actions no-color">
+            <input type="submit" value="Search" class="btn btn-default" />
+        </div>
+    </div>
+
+
+</form>
+
+
+
+
+
