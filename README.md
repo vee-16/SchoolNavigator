@@ -12,7 +12,7 @@ Key features include:
 - **User Interface**: Built using HTML and CSS to provide a simple and intuitive experience, requiring only start and end locations as inputs.
 - **MVC**: The use of MVC (Model-View-Controller) ensures easy maintenance and scalability.
 
-View Testing Videos: https://youtu.be/th6XWlC7j54?feature=shared
+[View Testing Videos](https://www.youtube.com/playlist?list=PL1pIRkbobBIqbyqRmJvMySXiLXFzopYup)
 
 ---
 
